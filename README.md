@@ -11,13 +11,14 @@ Users describe contract logic in plain English, and the AI generates deployable 
 - 📄 Auto-commented, readable smart contract output
 
 ## Example Use Case
-Describe your contract requirements in plain language, and receive ready-to-deploy Solidity code following best practices.
+The prompt was used to streamline smart contract development, allowing non-technical users to describe the contract logic in plain English while GPT-4 generated deployable Solidity code. This drastically reduces entry barriers for Rootstock development and speeds up prototyping.
 
-📝 Smart Contract Generator
 
-Prompt Title: Generate a Custom Smart Contract from Natural Language
+# 📝 Smart Contract Generator
 
-Prompt Text:
+## Prompt Title: Generate a Custom Smart Contract from Natural Language
+
+## Prompt Text:
 "Convert the following user requirements into a secure and optimized Solidity smart contract for deployment on the Rootstock network. The contract must follow best practices for security and efficiency, and include clear inline comments.
 
 User Requirements:
@@ -30,16 +31,16 @@ Fixed Supply: 10,000,000 tokens
 
 Standard: ERC-20 compatible."
 
-Expected Output:
+## Expected Output:
 A Solidity smart contract for the Rootstock network that creates an ERC-20 token named GreenCoin (GRN) with a fixed supply of 10 million tokens, written with security best practices and properly commented.
 
-AI Model / Tool Used:
+## AI Model / Tool Used:
 GPT-4
 
-Use Case:
+## Use Case:
 The prompt was used to streamline smart contract development, allowing non-technical users to describe the contract logic in plain English while GPT-4 generated deployable Solidity code. This drastically reduces entry barriers for Rootstock development and speeds up prototyping.
 
-Best Practices / Insights:
+## Best Practices / Insights:
 
 The more precise the natural language description, the more accurate and secure the generated smart contract.
 
@@ -47,9 +48,9 @@ Including Rootstock network and best practices in the prompt improved compatibil
 
 Follow-up prompts like: "Review the contract for security issues and suggest improvements." provided another layer of automated validation.
 
-Example Output:
+## Example Output:
 
-``
+```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
@@ -60,3 +61,4 @@ contract GreenCoin is ERC20 {
         _mint(msg.sender, 10000000 * 10 ** decimals());
     }
 }
+```
